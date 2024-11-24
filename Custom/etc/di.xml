@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Jayesh\Custom\Api\Data\CustomInterface" type="Jayesh\Custom\Model\Custom" />
+
+    <virtualType name="Jayesh\Custom\Model\ResourceModel\Custom\Custom\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">wk_grid_records</argument>
+            <argument name="resourceModel" xsi:type="string">Jayesh\Custom\Model\ResourceModel\Custom</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="custom_record_custom_list_data_source" xsi:type="string">Jayesh\Custom\Model\ResourceModel\Custom\Custom\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

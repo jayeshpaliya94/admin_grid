@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Jayesh_Custom::manager" title="Grid Manager" module="Jayesh_Custom" sortOrder="10" resource="Jayesh_Custom::manager"/>
+        <add id="Jayesh_Custom::add_row" title="Grid Manager" module="Jayesh_Custom" sortOrder="20" parent="Jayesh_Custom::manager" action="custom/custom" resource="Jayesh_Custom::add_row"/>
+    </menu>
+</config>
